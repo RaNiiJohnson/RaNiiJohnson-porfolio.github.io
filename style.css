@@ -671,7 +671,7 @@ main .snowflake {
     margin: -160px 0 0 50% !important;
   }
 }
-@media screen and (max-height: 486px) and (max-width: 820px) {
+@media screen and (max-height: 486px) {
   .popup {
     height: auto;
     top: 70px;
@@ -748,7 +748,7 @@ main .snowflake {
     padding: 7px 8px 3px;
   }
 }
-@media screen and (max-height: 356px) and (max-width: 600px) {
+@media screen and (max-height: 356px) and (max-width: 610px) {
   .popup {
     height: auto;
     padding: 5px;
@@ -1078,7 +1078,7 @@ footer img.img {
     right: 2% !important;
   }
 }
-@media screen and (max-height: 606px) and (max-width: 820px) {
+@media screen and (max-height: 600px) and (max-width: 820px) {
   .carousel {
     width: 100vh !important;
     margin: 5px auto !important;
@@ -1130,7 +1130,7 @@ footer img.img {
     text-align: center;
   }
 }
-@media screen and (max-height: 580px) and (max-width: 450px) {
+@media screen and (max-height: 620px) and (max-width: 786px) {
   .carousel {
     width: 50vh !important;
     margin: 15px auto !important;
@@ -1141,7 +1141,7 @@ footer img.img {
   }
   .carousel .img-project-1 h3,
   .carousel .img-project-2 h3 {
-    display: block;
+    display: block !important;
   }
   .carousel .img-project-1 p,
   .carousel .img-project-2 p {
