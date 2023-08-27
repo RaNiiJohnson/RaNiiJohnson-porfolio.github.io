@@ -247,6 +247,40 @@ main {
 
 }
 
+@media screen and (max-height: 356px) and (max-width: 600px) {
+    main {
+        .mesSkills {
+            margin: 35px 0 0 !important;
+
+            .wrapper {
+
+                p {
+                    line-height: 25px;
+                    padding-top: 0px;
+                    margin-top: 0.6rem;
+                    font-size: 1.5rem;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: 400;
+                        line-height: 30px;
+                        padding-top: 35px;
+                        background: $color-1;
+                    }
+
+                }
+
+
+
+            }
+
+
+
+        }
+    }
+
+}
+
 @media screen and (max-width: 605px) {
     .title.plus {
         opacity: 0;

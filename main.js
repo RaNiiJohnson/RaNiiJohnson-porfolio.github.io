@@ -173,6 +173,7 @@ themeToggle.addEventListener("click", ui.theme);
 
 //event: mousemove
 window.addEventListener("mousemove", ui.move);
+
 // Fonction pour démarrer les compteurs
 const dataCounters = document.querySelectorAll("span.data-counter");
 
@@ -309,6 +310,80 @@ window.addEventListener("resize", () => {
 });
 
 secondUpdateSlidePosition();
+// //buttons
+// const prevBtn = document.querySelector("#prevBtn");
+// const nextBtn = document.querySelector("#nextBtn");
+// const secondPrevBtn = document.querySelector(".prevBtn");
+// const secondNextBtn = document.querySelector(".nextBtn");
+
+// // counter
+// let counter = 1;
+// window.addEventListener("resize", () => {
+//   const size = carouselImages[0].clientWidth;
+
+//   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+
+//   //button listeners
+//   // ! project 1
+//   nextBtn.addEventListener("click", () => {
+//     if (counter >= carouselImages.length - 1) return;
+//     carouselSlide.style.transition = " transform 0.4s ease-in-out";
+//     counter++;
+//     carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//   });
+
+//   prevBtn.addEventListener("click", () => {
+//     if (counter <= 0) return;
+//     carouselSlide.style.transition = " transform 0.4s ease-in-out";
+//     counter--;
+//     carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//   });
+
+//   carouselSlide.addEventListener("transitionend", () => {
+//     if (carouselImages[counter].id === "lastClone") {
+//       carouselSlide.style.transition = "none";
+//       counter = carouselImages.length - 2;
+//       carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//     }
+//     if (carouselImages[counter].id === "firstClone") {
+//       carouselSlide.style.transition = "none";
+//       counter = carouselImages.length - counter;
+//       carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//     }
+//   });
+
+//   // ! project 2
+//   secondNextBtn.addEventListener("click", () => {
+//     if (counter >= secondCarouselImages.length - 1) return;
+//     secondCarouselSlide.style.transition = " transform 0.4s ease-in-out";
+//     counter++;
+//     secondCarouselSlide.style.transform =
+//       "translateX(" + -size * counter + "px)";
+//   });
+
+//   secondPrevBtn.addEventListener("click", () => {
+//     if (counter <= 0) return;
+//     secondCarouselSlide.style.transition = " transform 0.4s ease-in-out";
+//     counter--;
+//     secondCarouselSlide.style.transform =
+//       "translateX(" + -size * counter + "px)";
+//   });
+
+//   secondCarouselSlide.addEventListener("transitionend", () => {
+//     if (secondCarouselImages[counter].id === "lastClone") {
+//       secondCarouselSlide.style.transition = "none";
+//       counter = secondCarouselImages.length - 2;
+//       secondCarouselSlide.style.transform =
+//         "translateX(" + -size * counter + "px)";
+//     }
+//     if (secondCarouselImages[counter].id === "firstClone") {
+//       secondCarouselSlide.style.transition = "none";
+//       counter = secondCarouselImages.length - counter;
+//       secondCarouselSlide.style.transform =
+//         "translateX(" + -size * counter + "px)";
+//     }
+//   });
+// });
 
 const prevProject = document.getElementById("prevProject");
 const nextProject = document.getElementById("nextProject");

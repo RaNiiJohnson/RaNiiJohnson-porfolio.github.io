@@ -380,3 +380,74 @@ footer {
         text-align: center;
     }
 }
+
+@media screen and (max-height: 580px) and (max-width: 450px) {
+    .carousel {
+        width: 50vh !important;
+        margin: 15px auto !important;
+
+        .img-project-1,
+        .img-project-2 {
+
+            img {
+
+                width: 50vh !important;
+
+
+            }
+
+            h3 {
+                display: block;
+            }
+
+            p {
+                display: block;
+                font-size: 0.85rem !important;
+
+                &.first.is-inview:before {
+                    width: 0;
+                }
+            }
+        }
+
+
+    }
+
+    span.btn {
+        margin: 5px;
+        margin-top: -50px !important;
+        opacity: 0;
+
+        &.is-inview {
+            opacity: 1;
+            margin: 0;
+        }
+
+
+        &#prevProject {
+            left: 10%;
+            top: 110px !important;
+            transition-delay: 2s;
+        }
+
+        &#nextProject {
+            right: 10%;
+            top: 110px !important;
+            transition-delay: 2.2s
+        }
+    }
+
+    footer .contact {
+        margin: 60px 0 20px !important;
+    }
+
+    footer .appear.icon img {
+        height: 30px !important;
+    }
+
+    footer .contact p {
+        font-size: calc(1rem + 1.6vw) !important;
+        margin: 5px 0 !important;
+        text-align: center;
+    }
+}
