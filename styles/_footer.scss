@@ -1,0 +1,382 @@
+@use "./mixin" as *;
+@use "./font" as *;
+
+footer {
+    height: 200vh;
+    overflow: hidden;
+    position: relative;
+    font-family: $font-3;
+    background: $color-1;
+    transition: background 0.7s;
+
+
+    .my-projects {
+        display: flex;
+
+        .project {
+            position: absolute;
+            margin: 2vh 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            z-index: -9;
+            transition: opacity 0.4 ease-in-out;
+
+            img.icon {
+                display: none;
+            }
+
+        }
+
+        .project.current {
+            opacity: 1;
+            display: block;
+            z-index: 0;
+
+            img.icon {
+                display: block;
+                position: absolute;
+                background: #ffffffb6;
+                padding: 10px;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background: #fff;
+                    transform: scale(1.08);
+                }
+
+                &:active {
+                    transform: scale(0.9);
+                }
+
+                &#prevBtn,
+                &.prevBtn {
+                    top: 40%;
+                    left: 5%;
+                }
+
+                &#nextBtn,
+                &.nextBtn {
+                    top: 40%;
+                    right: 5%;
+                }
+            }
+
+        }
+
+        .carousel {
+            overflow: hidden;
+            position: relative;
+            width: 90vw;
+            max-width: 850px;
+            margin: 10px auto;
+            padding-bottom: 160px;
+
+            .img-project-1,
+            .img-project-2 {
+                display: flex;
+                width: 100%;
+                height: auto;
+
+
+                section {
+                    position: absolute;
+                    color: #fefefe;
+                    width: 100%;
+                }
+
+
+                img {
+                    object-fit: cover;
+                    width: 90vw;
+                    max-width: 850px;
+
+
+                }
+
+                h3 {
+                    margin: 5px 0 5px 0;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    margin-top: 5px;
+                    line-height: 22px;
+
+                    &.first::before {
+                        content: "";
+                        position: absolute;
+                        height: 110%;
+                        width: 110%;
+                        top: -3px;
+                        background: $color-1;
+                        transition: width 2s ease-out;
+                        transition-delay: 2.3s;
+                    }
+
+                    &.first.is-inview:before {
+                        width: 0;
+                    }
+                }
+            }
+
+            &.view::after {
+                content: "";
+                position: absolute;
+                height: 110%;
+                width: 110%;
+                top: -3px;
+                background: $color-1;
+                transition: width 2s ease-out;
+                transition-delay: 1s;
+            }
+
+            &.view.is-inview::after {
+                width: 0;
+            }
+
+        }
+
+
+
+    }
+
+    span.btn {
+        position: absolute;
+        font-family: $font-2;
+        color: #fefefe;
+        mix-blend-mode: exclusion;
+        border-bottom: 3px solid #be7404;
+        margin: 5px;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: 0.5s;
+        font-size: 0.8rem;
+        margin-top: -50px;
+        opacity: 0;
+
+        &.is-inview {
+            opacity: 1;
+            margin: 0;
+        }
+
+
+        &#prevProject {
+            left: 10%;
+            top: 80px;
+            transition-delay: 4s;
+        }
+
+        &#nextProject {
+            right: 10%;
+            top: 80px;
+            transition-delay: 4.2s
+        }
+    }
+
+    .appear p {
+        font-family: $font-4;
+        color: #333;
+    }
+
+    .contact-title {
+        color: $color-1;
+
+        span {
+            border-bottom: 3px solid $color-1;
+        }
+    }
+
+    .contact {
+        margin: 150px 0 120px;
+    }
+
+    .contact p {
+        font-size: calc(1rem + 2vw);
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    #l2 {
+        transition-delay: 1.2s;
+    }
+
+    #l3 {
+        transition-delay: 1.6s;
+    }
+
+    .contact a {
+        font-family: $font-5;
+        color: $color-1;
+        font-size: calc(1rem + 2vw);
+    }
+
+    .appear.icon {
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        transition-delay: 3s;
+
+        img {
+            height: 50px;
+            margin: 40px 20px;
+        }
+    }
+
+    img.img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        height: 300px;
+        width: 300px;
+        transition: 1s;
+        transition-delay: 2s;
+        transform: translateY(300px);
+    }
+
+}
+
+@media screen and (max-height: 700px) {
+    img.img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 779px) {
+    .carousel {
+        margin: 30px auto 0 !important;
+
+        h3 {
+            margin: 5px 0 5px 5px !important;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin: 5px 5px 0 5px;
+        }
+    }
+
+    img.img {
+        display: none;
+    }
+
+    img.icon {
+        padding: 5px !important;
+
+        &#prevBtn,
+        &.prevBtn {
+            top: 30% !important;
+            left: 2% !important;
+        }
+
+        &#nextBtn,
+        &.nextBtn {
+            top: 30% !important;
+            right: 2% !important;
+        }
+    }
+}
+
+// @media screen and (max-height: 606px) and (max-width: 820px) {
+//     .carousel {
+//         width: 100vh !important;
+//         margin: 5px auto !important;
+
+//         .img-project-1,
+//         .img-project-2 {
+
+//             img {
+//                 width: 100vh !important;
+
+
+//             }
+
+//             h3 {
+//                 display: none;
+//             }
+
+//             p {
+//                 display: none;
+
+//                 &.first.is-inview:before {
+//                     width: 0;
+//                 }
+//             }
+//         }
+
+
+//     }
+
+// }
+
+@media screen and (max-height: 606px) and (max-width: 820px) {
+    .carousel {
+        width: 100vh !important;
+        margin: 5px auto !important;
+
+        .img-project-1,
+        .img-project-2 {
+
+            img {
+                width: 100vh !important;
+
+
+            }
+
+            h3 {
+                display: none;
+            }
+
+            p {
+                display: none;
+
+                &.first.is-inview:before {
+                    width: 0;
+                }
+            }
+        }
+
+
+    }
+
+    span.btn {
+        margin: 5px;
+        margin-top: -50px !important;
+        opacity: 0;
+
+        &.is-inview {
+            opacity: 1;
+            margin: 0;
+        }
+
+
+        &#prevProject {
+            left: 10%;
+            top: 80px;
+            transition-delay: 2s;
+        }
+
+        &#nextProject {
+            right: 10%;
+            top: 80px;
+            transition-delay: 2.2s
+        }
+    }
+
+    footer .contact {
+        margin: 60px 0 20px !important;
+    }
+
+    footer .appear.icon img {
+        height: 30px !important;
+    }
+
+    footer .contact p {
+        font-size: calc(1rem + 1.6vw) !important;
+        margin: 5px 0 !important;
+        text-align: center;
+    }
+}

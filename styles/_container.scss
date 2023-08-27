@@ -1,0 +1,199 @@
+@use "./mixin" as *;
+@use "./font" as *;
+
+*,
+*::after,
+*::before {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+*::selection {
+    background: #fefeff;
+    color: $color-1;
+    text-shadow: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fefeff;
+}
+
+// .dark {
+//     background: rgb(24, 24, 24);
+// }
+
+body {
+    margin: 0 auto;
+    background-color: rgb(162, 202, 234);
+    max-width: 1500px;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(19deg,
+            rgb(0, 217, 255) 30%,
+            rgb(28, 107, 160) 91%);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 9s;
+
+    .star {
+        background: url(../assets/img/star.png) center/cover;
+        position: absolute;
+        z-index: 0;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .Sstar {
+        background: url(../assets/img/star\ of\ dawn.png) center/cover;
+        position: absolute;
+        z-index: 0;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    #moon {
+        z-index: 1.5;
+        position: absolute;
+        top: 110vh;
+        right: 55vw;
+        color: rgb(255, 255, 113);
+        font-size: calc(5rem + 16vw);
+        transition: 3s;
+        transition-delay: 0.9s;
+    }
+
+    #sun {
+        position: absolute;
+        color: yellow;
+        z-index: 0;
+        font-size: 10vw;
+        top: 2vh;
+        left: 5px;
+        transition: 2s
+    }
+
+    .cloudOne {
+        background: url(./assets/img/cloud_scene1st.png) center/cover;
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        animation: anim infinite;
+        animation-duration: 15s;
+    }
+
+    .cloudTwo {
+        background: url(../assets/img/cloud_scene2nd.png) center/cover;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        animation: anim2 infinite;
+        animation-duration: 50s;
+    }
+
+    .cloudCompany {
+        background: url(./assets/img/cloud_scene_mini.png) center/contain;
+        transition: 4s ease-out;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 1;
+        height: 80px;
+        width: 150px;
+    }
+
+    @keyframes anim {
+        0% {
+            height: 100vh;
+        }
+
+        50% {
+            height: 90vh;
+
+        }
+
+        100% {
+            height: 100vh;
+        }
+    }
+
+    @keyframes anim2 {
+        0% {
+            height: 70vh;
+        }
+
+        25% {
+            height: 100vh;
+
+        }
+
+        50% {
+            height: 110vh;
+
+        }
+
+        90% {
+            height: 60vh;
+
+        }
+
+        100% {
+            height: 70vh;
+        }
+    }
+
+    // button {
+    //     z-index: 6;
+    //     border-radius: 20px;
+    //     box-shadow: 4px 4px 10px #ffffff41;
+    //     position: absolute;
+    //     left: 50%;
+    //     top: 30%;
+    //     transform: translate(-50%, -50%);
+    //     padding: 27px 60px 20px 60px;
+    //     border: 1px solid #ffffff;
+    //     text-transform: uppercase;
+    //     font-size: 5vw;
+    //     font-family: $font-2;
+    //     color: rgb(28, 107, 160);
+    //     cursor: pointer
+    // }
+
+    .typed {
+        @include flex-center();
+        position: relative;
+        z-index: 4;
+
+        display: flex;
+        width: 75vw;
+        margin: 7vh auto;
+        flex-direction: column;
+        font-size: calc(0.5rem + 2vw);
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 1px;
+        line-height: 1.1;
+        font-family: $font-3;
+        text-shadow: -2px -1px 1px $color-1;
+    }
+
+}

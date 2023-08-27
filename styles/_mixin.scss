@@ -1,0 +1,22 @@
+@mixin flex-center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin h1-title {
+    height: 8vh;
+    padding: 15px 10px;
+    margin: 13px auto;
+    width: 100vw;
+    color: $color-1;
+    font-size: calc(1.5rem + 2vw);
+
+    span {
+        padding-top: 8px;
+        border-bottom: 3px solid $color-1;
+    }
+}
+
+$color-1: #0b7994;

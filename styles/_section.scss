@@ -1,0 +1,18 @@
+@use "./mixin" as *;
+@use "./font" as *;
+
+section {
+    height: 100vh;
+    position: relative;
+    font-family: $font-3;
+
+    h1 {
+        @include flex-center;
+        @include h1-title;
+        color: #fff;
+
+        span {
+            border-bottom: 3px solid #fff;
+        }
+    }
+}

@@ -1,0 +1,254 @@
+@use "./mixin" as *;
+@use "./font" as *;
+
+main {
+    overflow: hidden;
+    position: relative;
+    font-family: $font-3;
+    height: 100vh;
+    background: linear-gradient(360deg,
+            $color-1 20%,
+            rgb(255, 255, 255) 91%);
+
+
+
+    .title.plus {
+        z-index: 555;
+        color: #fff;
+        transition: color 0.5s;
+
+        span:nth-child(1) {
+            transition-delay: 0.1s;
+        }
+
+        span:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+
+        span:nth-child(3) {
+            transition-delay: 0.3s;
+        }
+
+        span:nth-child(4) {
+            transition-delay: 0.4s;
+        }
+
+        span:nth-child(5) {
+            transition-delay: 0.5s;
+        }
+
+        span:nth-child(6) {
+            transition-delay: 0.6s;
+        }
+
+        span {
+
+            border: none;
+        }
+    }
+
+    h1 {
+        @include flex-center;
+        @include h1-title;
+
+
+    }
+
+    .mesSkills {
+        margin: 150px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .wrapper {
+            z-index: 6;
+            font-family: $font-1;
+            animation: anime infinite 16s;
+            font-weight: bold;
+            color: #333;
+            letter-spacing: 3px;
+
+            p {
+                cursor: pointer;
+                font-size: calc(1rem + 5vw);
+                line-height: 30px;
+                padding-top: 15px;
+                background: $color-1;
+                display: inline-block;
+                border-radius: 6px;
+                box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.26);
+                margin-top: 2.6rem;
+                color: transparent;
+                -webkit-text-stroke: 2px #fff;
+
+                a {
+                    text-decoration: none;
+                    font-weight: 400;
+                    -webkit-text-stroke: 2px #fff;
+                    line-height: 30px;
+                    padding-top: 15px;
+                    background: $color-1;
+                }
+
+            }
+
+            p::before {
+                content: '';
+                background: #333;
+                height: 100%;
+                width: 25px;
+            }
+
+            p:hover {
+                letter-spacing: 5px;
+                -webkit-text-stroke: 2px $color-1 ;
+                transition: 0.8s;
+                background-color: #fff;
+                box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.541), 15px 14px 10px $color-1;
+            }
+
+            p.skrt:hover {
+                box-shadow: 4px 4px 10px $color-1, 15px 14px 10px rgba(255, 255, 255, 0.541);
+            }
+
+        }
+
+        .wrapper:nth-child(6) p {
+            color: transparent;
+            -webkit-text-stroke: none;
+        }
+
+        .wrapper:nth-child(6) p:hover {
+            background: #333;
+            box-shadow: 4px 4px 10px $color-1, 15px 14px 10px rgba(170, 2, 2, 0.541);
+        }
+
+
+
+
+    }
+
+    .snowflake {
+        background: url(../assets/img/snowflake.png) center/cover;
+        position: absolute;
+        z-index: var(--Zindex);
+        animation: fall;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(120vh);
+            left: var(--left);
+        }
+    }
+
+
+}
+
+@media screen and (max-height: 750px) {
+    main {
+        .mesSkills {
+            margin: 80px 0 0;
+
+            .wrapper {
+
+                p {
+                    line-height: 35px;
+                    padding-top: 5px;
+                    margin-top: 1.5rem;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: 400;
+                        line-height: 30px;
+                        padding-top: 35px;
+                        background: $color-1;
+                    }
+
+                }
+
+
+
+            }
+
+
+
+        }
+    }
+
+}
+
+@media screen and (max-height: 526px) {
+    main {
+        .mesSkills {
+            margin: 60px 0 0;
+
+            .wrapper {
+
+                p {
+                    line-height: 30px;
+                    padding-top: 0px;
+                    margin-top: 1rem;
+                    font-size: 2rem;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: 400;
+                        line-height: 30px;
+                        padding-top: 35px;
+                        background: $color-1;
+                    }
+
+                }
+
+
+
+            }
+
+
+
+        }
+    }
+
+}
+
+@media screen and (max-height: 386px) {
+    main {
+        .mesSkills {
+            margin: 30px 0 0;
+
+            .wrapper {
+
+                p {
+                    line-height: 30px;
+                    padding-top: 0px;
+                    margin-top: 1rem;
+                    font-size: 2rem;
+
+                    a {
+                        text-decoration: none;
+                        font-weight: 400;
+                        line-height: 30px;
+                        padding-top: 35px;
+                        background: $color-1;
+                    }
+
+                }
+
+
+
+            }
+
+
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 605px) {
+    .title.plus {
+        opacity: 0;
+    }
+}
