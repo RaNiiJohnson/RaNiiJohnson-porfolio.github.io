@@ -1,9 +1,6 @@
-import "/assets/all";
-import "/assets/lib/locomotive-scroll.min.css";
-import "/assets/lib/locomotive-scroll.min.js";
 import "/js/projectSlide";
 import "/js/darkMode-n-clittleCloud";
-import { snowMaker } from "./js/snowFlakes";
+import { snowMaker } from "/js/snowFlakes";
 import "/js/popupSkills";
 
 //locomotive scroll
