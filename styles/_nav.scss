@@ -71,7 +71,7 @@
 
             .theme::after {
                 content: '';
-                background-image: url(../assets/icons/sun.svg);
+                background-image: url(./assets/icons/sun.svg);
                 background-repeat: no-repeat;
                 background-position: center;
                 width: 20px;
@@ -91,7 +91,7 @@
 
             .theme.dark::after {
                 transform: translateX(calc(-100% - 4px));
-                background-image: url(../assets/icons/moon-stars.svg);
+                background-image: url(./assets/icons/moon-stars.svg);
                 background-repeat: no-repeat;
                 width: 20px;
                 height: 20px;

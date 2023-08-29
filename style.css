@@ -62,14 +62,14 @@ body {
   transition: 9s;
 }
 .container .star {
-  background: url(../assets/img/star.png) center/cover;
+  background: url(./assets/img/star.png) center/cover;
   position: absolute;
   z-index: 0;
   transition: 0.3s;
   opacity: 0;
 }
 .container .Sstar {
-  background: url(../assets/img/star\ of\ dawn.png) center/cover;
+  background: url(./assets/img/star\ of\ dawn.png) center/cover;
   position: absolute;
   z-index: 0;
   transition: 0.3s;
@@ -106,7 +106,7 @@ body {
   animation-duration: 15s;
 }
 .container .cloudTwo {
-  background: url(../assets/img/cloud_scene2nd.png) center/cover;
+  background: url(./assets/img/cloud_scene2nd.png) center/cover;
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -244,7 +244,7 @@ nav .toggle .theme::before {
 }
 nav .toggle .theme::after {
   content: "";
-  background-image: url(../assets/icons/sun.svg);
+  background-image: url(./assets/icons/sun.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 20px;
@@ -262,7 +262,7 @@ nav .toggle .theme.dark::before {
 }
 nav .toggle .theme.dark::after {
   transform: translateX(calc(-100% - 4px));
-  background-image: url(../assets/icons/moon-stars.svg);
+  background-image: url(./assets/icons/moon-stars.svg);
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
@@ -431,7 +431,7 @@ main .mesSkills .wrapper:nth-child(6) p:hover {
   box-shadow: 4px 4px 10px #0b7994, 15px 14px 10px rgba(170, 2, 2, 0.541);
 }
 main .snowflake {
-  background: url(../assets/img/snowflake.png) center/cover;
+  background: url(./assets/img/snowflake.png) center/cover;
   position: absolute;
   z-index: var(--Zindex);
   animation: fall;

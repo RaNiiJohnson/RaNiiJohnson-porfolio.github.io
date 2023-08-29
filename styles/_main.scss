@@ -130,7 +130,7 @@ main {
     }
 
     .snowflake {
-        background: url(../assets/img/snowflake.png) center/cover;
+        background: url(./assets/img/snowflake.png) center/cover;
         position: absolute;
         z-index: var(--Zindex);
         animation: fall;

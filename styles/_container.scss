@@ -51,7 +51,7 @@ body {
     transition: 9s;
 
     .star {
-        background: url(../assets/img/star.png) center/cover;
+        background: url(./assets/img/star.png) center/cover;
         position: absolute;
         z-index: 0;
         transition: 0.3s;
@@ -59,7 +59,7 @@ body {
     }
 
     .Sstar {
-        background: url(../assets/img/star\ of\ dawn.png) center/cover;
+        background: url(./assets/img/star\ of\ dawn.png) center/cover;
         position: absolute;
         z-index: 0;
         transition: 0.3s;
@@ -100,7 +100,7 @@ body {
     }
 
     .cloudTwo {
-        background: url(../assets/img/cloud_scene2nd.png) center/cover;
+        background: url(./assets/img/cloud_scene2nd.png) center/cover;
         position: absolute;
         bottom: 0;
         z-index: 1;
