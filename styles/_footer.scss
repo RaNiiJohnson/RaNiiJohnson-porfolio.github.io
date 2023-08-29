@@ -99,6 +99,22 @@ footer {
                     margin: 5px 0 5px 0;
                 }
 
+                a {
+                    display: inline-block;
+                    background: #7a1912;
+                    padding: 1px 5px;
+                    border-radius: 5px 10px;
+                    transition: 0.4s;
+
+                    &:hover {
+                        background: #3f1cc0;
+                        color: #ffffff;
+                        box-shadow: 1px 2px 3px 1px rgba(241, 241, 30, 0.699);
+                        transform: translate(6px, -2px);
+                    }
+
+                }
+
                 p {
                     font-size: 1.2rem;
                     margin-top: 5px;

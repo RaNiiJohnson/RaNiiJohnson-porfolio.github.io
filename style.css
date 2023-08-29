@@ -933,6 +933,21 @@ footer .my-projects .carousel .img-project-1 h3,
 footer .my-projects .carousel .img-project-2 h3 {
   margin: 5px 0 5px 0;
 }
+footer .my-projects .carousel .img-project-1 a,
+footer .my-projects .carousel .img-project-2 a {
+  display: inline-block;
+  background: #7a1912;
+  padding: 1px 5px;
+  border-radius: 5px 10px;
+  transition: 0.4s;
+}
+footer .my-projects .carousel .img-project-1 a:hover,
+footer .my-projects .carousel .img-project-2 a:hover {
+  background: #3f1cc0;
+  color: #ffffff;
+  box-shadow: 1px 2px 3px 1px rgba(241, 241, 30, 0.699);
+  transform: translate(6px, -2px);
+}
 footer .my-projects .carousel .img-project-1 p,
 footer .my-projects .carousel .img-project-2 p {
   font-size: 1.2rem;
